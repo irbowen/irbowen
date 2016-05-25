@@ -1,8 +1,17 @@
-set number
-
-colo desert
 
 set nocompatible
+
+set number
+set relativenumber
+
+" The escape key is really far away!
+imap jj <ESC>
+" So we can move up an ddown lines correctly
+nnoremap j gj
+nnoremap k gk
+
+" Is it the best? probably not
+colo desert
 
 syntax enable
 
@@ -20,10 +29,7 @@ set expandtab
 set showcmd
 set cursorline
 
-filetype indent on
-
-nnoremap j gj
-nnoremap k gk
-
 set noswapfile
+
+filetype indent on
 
