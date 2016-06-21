@@ -29,7 +29,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Is it the best? probably not
-colo delek
+colo torte
 
 " I was using desert, but delek plays
 " nicer with my redshifted display
@@ -71,3 +71,6 @@ set nobackup
 
 filetype indent on
 
+" Google's got me with that 80 col limit
+set textwidth=80
+set colorcolumn=+1
