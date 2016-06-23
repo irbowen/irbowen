@@ -1,4 +1,3 @@
-
 " Isaac Bowen
 " .vimrc
 
@@ -55,6 +54,9 @@ set shiftwidth=2
 set tabstop=2
 set softtabstop=2
 set expandtab
+" Spaces are *always* better, but Makefiles require tabs...
+" This lets us use Shift+Tab to insert a tab 
+inoremap <S-Tab> <C-V><Tab>
 
 set showcmd
 set cursorline
@@ -72,5 +74,9 @@ set nobackup
 filetype indent on
 
 " Google's got me with that 80 col limit
-set textwidth=80
-set colorcolumn=+1
+" set textwidth=80
+" set colorcolumn=+1
+
+" set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+" set list
+
