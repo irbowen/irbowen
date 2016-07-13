@@ -40,6 +40,12 @@ syntax enable
 " Highlight search matches and progress to the next one
 set hlsearch
 set incsearch
+" Press Space to turn off highlighting and clear any message already displayed                                                                                                                                                                                             
+noremap <silent> <Space> :nohlsearch<Bar>:echo<CR>  
+
+" Clang autoformat
+" noremap <C-K> :pyf /usr/lib/clang-format/clang-format.py<CR>                                                                                                                                                                                                               
+" inoremap <C-K> <C-O>:pyf /usr/lib/clang-format/clang-format.py<CR>                                                                                                                                                                                                         
 
 " Make search work correctly
 set ignorecase
@@ -58,7 +64,9 @@ set expandtab
 " This lets us use Shift+Tab to insert a tab 
 inoremap <S-Tab> <C-V><Tab>
 
+set showmode
 set showcmd
+
 set cursorline
 set showmatch
 
@@ -72,6 +80,9 @@ set noswapfile
 set nobackup
 
 filetype indent on
+
+" Automatically reload the vimrc when its changed
+autocmd bufwritepost vimrc source $MYVIMRC
 
 " Google's got me with that 80 col limit
 " set textwidth=80
