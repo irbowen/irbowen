@@ -59,7 +59,7 @@ set expandtab
 inoremap <S-Tab> <C-V><Tab>
 
 set showcmd
-set cursorline
+"  set cursorline
 set showmatch
 
 " Really not a fan of all the error noises
@@ -73,10 +73,24 @@ set nobackup
 
 filetype indent on
 
+map <C-K> :pyf /usr/lib/llvm-3.7/lib/clang-format.py<cr>
+imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
+
 " Google's got me with that 80 col limit
 " set textwidth=80
 " set colorcolumn=+1
 
 " set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " set list
+
+set foldmethod=syntax
+set foldlevelstart=20
+"" Fold the current block with space, because its so common
+nnoremap <Space> za
+" Clear the last search highlighting
+nnoremap <CR> :noh<CR><CR>
+set clipboard=unnamedplus
+
+vnoremap <silent> # :s#^#\##<cr>:noh<cr>
+vnoremap <silent> -# :s#^\###<cr>:noh<cr>
 
