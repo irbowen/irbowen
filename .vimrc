@@ -29,21 +29,25 @@ nnoremap k gk
 
 " Is it the best? probably not
 colo torte
-
-" I was using desert, but delek plays
-" nicer with my redshifted display
 " colo desert
 
 " We have to have syntax highlighting!
 syntax enable
 
+" Make search work correctly
+set ignorecase
+set smartcase
+
 " Highlight search matches and progress to the next one
 set hlsearch
 set incsearch
 
-" Make search work correctly
-set ignorecase
-set smartcase
+" Clear the last search highlighting by pressing ENTER
+nnoremap <CR> :noh<CR><CR>
+
+" Clang autoformat
+" noremap <C-K> :pyf /usr/lib/clang-format/clang-format.py<CR>
+" inoremap <C-K> <C-O>:pyf /usr/lib/clang-format/clang-format.py<CR>
 
 set backspace=indent,eol,start
 
@@ -58,8 +62,11 @@ set expandtab
 " This lets us use Shift+Tab to insert a tab 
 inoremap <S-Tab> <C-V><Tab>
 
+set showmode
 set showcmd
 "  set cursorline
+
+" Highlight matching braces
 set showmatch
 
 " Really not a fan of all the error noises
@@ -75,6 +82,8 @@ filetype indent on
 
 map <C-K> :pyf /usr/lib/llvm-3.7/lib/clang-format.py<cr>
 imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
+" Automatically reload the vimrc when its changed
+autocmd bufwritepost vimrc source $MYVIMRC
 
 " Google's got me with that 80 col limit
 " set textwidth=80
@@ -87,8 +96,6 @@ set foldmethod=syntax
 set foldlevelstart=20
 "" Fold the current block with space, because its so common
 nnoremap <Space> za
-" Clear the last search highlighting
-nnoremap <CR> :noh<CR><CR>
 set clipboard=unnamedplus
 
 vnoremap <silent> # :s#^#\##<cr>:noh<cr>
