@@ -11,8 +11,10 @@ inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 
+
 " I'm not about VI
 set nocompatible
+
 
 " Relative numbers let you just around
 " faster, as well as know how many lines
@@ -92,10 +94,24 @@ autocmd bufwritepost vimrc source $MYVIMRC
 " set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " set list
 
-set foldmethod=syntax
+" More natural location for new splits
+set splitbelow
+set splitright
+
+" Easier split window navigation
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+set foldmethod=indent
 set foldlevelstart=20
 "" Fold the current block with space, because its so common
 nnoremap <Space> za
+
+" Make yank use the system clipboard, so we can copy and paste to/from vim
+" NOTE: I had to run "apt install vim-gui-common" on my system to get this to work
+" Run "vim --version" to see if you have the xterm_clipboard feature
 set clipboard=unnamedplus
 
 vnoremap <silent> # :s#^#\##<cr>:noh<cr>
