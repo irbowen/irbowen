@@ -1,26 +1,26 @@
 " Isaac Bowen
 " .vimrc
 
+set nocompatible
+
 " The point is to learn vim, right?
-noremap <Up> <Nop>
-noremap <Down> <Nop>
-noremap <Left> <Nop>
-noremap <Right> <Nop>
+nnoremap <Left> :echoe "Use h"<CR>
+nnoremap <Right> :echoe "Use l"<CR>
+nnoremap <Up> :echoe "Use k"<CR>
+nnoremap <Down> :echoe "Use j"<CR>
 inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
-
-
-" I'm not about VI
-set nocompatible
-
 
 " Relative numbers let you just around
 " faster, as well as know how many lines
 " you want to yank or delete
 set number
 set relativenumber
+
+" Display extra whitespace
+set list listchars=tab:»·,trail:·,nbsp:·
 
 " The escape key is really far away!
 imap jj <ESC>
