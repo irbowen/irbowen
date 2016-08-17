@@ -1,0 +1,7 @@
+[user]
+	email = irbowen@umich.edu
+	name = Isaac Bowen
+[push]
+	default = simple
+[core]
+	editor = vim

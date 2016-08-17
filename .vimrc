@@ -114,6 +114,17 @@ nnoremap <Space> za
 " Run "vim --version" to see if you have the xterm_clipboard feature
 set clipboard=unnamedplus
 
+" Open NERDTreee on startup
+autocmd vimenter * NERDTree
+" Map opening of NERDTreee to Ctrl + N
+map <C-n> :NERDTreeToggle<CR>
+
 vnoremap <silent> # :s#^#\##<cr>:noh<cr>
 vnoremap <silent> -# :s#^\###<cr>:noh<cr>
+
+execute pathogen#infect()
+call pathogen#helptags()
+
+
+
 
