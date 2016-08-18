@@ -118,6 +118,8 @@ set clipboard=unnamedplus
 autocmd vimenter * NERDTree
 " Map opening of NERDTreee to Ctrl + N
 map <C-n> :NERDTreeToggle<CR>
+" Close vim if nerdtree is the only thing still open
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 vnoremap <silent> # :s#^#\##<cr>:noh<cr>
 vnoremap <silent> -# :s#^\###<cr>:noh<cr>
