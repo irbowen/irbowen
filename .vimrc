@@ -116,6 +116,8 @@ set clipboard=unnamedplus
 
 " Open NERDTreee on startup
 autocmd vimenter * NERDTree
+" Because I don't want to start with my cursor in the NerdTree window
+autocmd VimEnter * wincmd p
 " Map opening of NERDTreee to Ctrl + N
 map <C-n> :NERDTreeToggle<CR>
 " Close vim if nerdtree is the only thing still open
