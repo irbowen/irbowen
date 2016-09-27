@@ -1,0 +1,4 @@
+ps aux 
+ps aux | grep isaac 
+ps aux | grep isaac | grep '[b]ash' 
+ps aux | grep isaac | grep '[b]ash' | awk '{print $2}'
