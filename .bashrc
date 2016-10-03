@@ -123,6 +123,6 @@ export EDITOR="$VISUAL"
 
 eval $(thefuck --alias)
 
-export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/isaac/.vimpkg/bin
+export PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/isaac/.vimpkg/bin:/usr/lib/llvm-3.7/bin
 
 

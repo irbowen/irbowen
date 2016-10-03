@@ -18,8 +18,6 @@ Plugin 'Valloric/YouCompleteMe'
 " End configuration, makes the plugins available
 call vundle#end()
 
-
-
 " The point is to learn vim, right?
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -64,10 +62,6 @@ set incsearch
 " Clear the last search highlighting by pressing ENTER
 nnoremap <CR> :noh<CR><CR>
 
-" Clang autoformat
-" noremap <C-K> :pyf /usr/lib/clang-format/clang-format.py<CR>
-" inoremap <C-K> <C-O>:pyf /usr/lib/clang-format/clang-format.py<CR>
-
 set backspace=indent,eol,start
 
 " Why do you need so many commands to make tabs
@@ -99,8 +93,9 @@ set nobackup
 
 filetype indent on
 
-map <C-K> :pyf /usr/lib/llvm-3.7/lib/clang-format.py<cr>
-imap <C-K> <c-o>:pyf <path-to-this-file>/clang-format.py<cr>
+noremap <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
+imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
+
 " Automatically reload the vimrc when its changed
 autocmd bufwritepost vimrc source $MYVIMRC
 
