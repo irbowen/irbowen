@@ -9,7 +9,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
-
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 
@@ -34,6 +33,7 @@ inoremap <Right> <Nop>
 set number
 set relativenumber
 
+set cursorline
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -134,6 +134,8 @@ autocmd VimEnter * wincmd p
 map <C-n> :NERDTreeToggle<CR>
 " Close vim if nerdtree is the only thing still open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 
 vnoremap <silent> # :s#^#\##<cr>:noh<cr>
 vnoremap <silent> -# :s#^\###<cr>:noh<cr>
