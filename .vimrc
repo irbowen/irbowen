@@ -100,8 +100,8 @@ imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
 autocmd bufwritepost vimrc source $MYVIMRC
 
 " Google's got me with that 80 col limit
-" set textwidth=80
-" set colorcolumn=+1
+set textwidth=80
+set colorcolumn=+1
 
 " set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " set list
@@ -135,6 +135,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if nerdtree is the only thing still open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+" If we're using python, let's use 4 spaces (everyone's doing it...)
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 
 vnoremap <silent> # :s#^#\##<cr>:noh<cr>
