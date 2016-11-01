@@ -1,4 +1,39 @@
-ps aux 
-ps aux | grep isaac 
-ps aux | grep isaac | grep '[b]ash' 
-ps aux | grep isaac | grep '[b]ash' | awk '{print $2}'
+
+# Process Mangement
+
+# Show all proceses running on the system
+ps aux  
+# Grep by user
+ps aux | grep isaac  
+# Grep by username
+ps aux | grep isaac | grep '[b]ash'  
+# Print the second column - the pid of the process
+ps aux | grep isaac | grep '[b]ash' | awk '{print $2}' 
+
+# Show processes in a tree
+pstree
+# Show processes uncompressed with process id's
+pstree -cp
+
+
+
+
+
+# File and Directory Managment
+
+# Print all files and directories below here
+tree
+# Include hidden files
+tree -a
+# Print all directories below here
+tree -d
+# Print file structure to xml or json 
+tree -J
+tree -X
+# Output to file filename
+tree -J -o tree_output
+
+
+# Todo: All the vim things! fols, tabs, splits (vertical and horizontal), vimrc
+# tips
+# byobu stuff
