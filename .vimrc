@@ -100,8 +100,8 @@ imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
 autocmd bufwritepost vimrc source $MYVIMRC
 
 " Google's got me with that 80 col limit
-set textwidth=80
-set colorcolumn=+1
+" set textwidth=80
+"set colorcolumn=+1
 
 " set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " set list
