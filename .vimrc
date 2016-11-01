@@ -45,7 +45,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Is it the best? probably not
-colo torte
+colo darkblue
 " colo desert
 
 " We have to have syntax highlighting!
