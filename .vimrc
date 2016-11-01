@@ -14,6 +14,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'Valloric/YouCompleteMe'
 
+Plugin 'flazz/vim-colorschemes'
 " End configuration, makes the plugins available
 call vundle#end()
 
