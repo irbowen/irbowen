@@ -11,10 +11,7 @@ call vundle#begin()
 "call vundle#begin('~/some/path/here')
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
-
 Plugin 'Valloric/YouCompleteMe'
-
-Plugin 'flazz/vim-colorschemes'
 " End configuration, makes the plugins available
 call vundle#end()
 
@@ -34,7 +31,6 @@ inoremap <Right> <Nop>
 set number
 set relativenumber
 
-set cursorline
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
@@ -46,8 +42,7 @@ nnoremap j gj
 nnoremap k gk
 
 " Is it the best? probably not
-colo darkblue
-" colo desert
+colo desert
 
 " We have to have syntax highlighting!
 syntax enable
@@ -94,8 +89,11 @@ set nobackup
 
 filetype indent on
 
-noremap <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
-imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
+map <C-I> :py3f /usr/share/vim/addons/syntax/clang-format.py<cr>
+imap <C-I> <c-o>:py3f /usr/share/vim/addons/syntax/clang-format.py<cr>
+
+"noremap <C-K> :pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
+"imap <C-K> <c-o>:pyf /usr/share/vim/addons/syntax/clang-format-3.7.py<cr>
 
 " Automatically reload the vimrc when its changed
 autocmd bufwritepost vimrc source $MYVIMRC
