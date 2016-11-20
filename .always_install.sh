@@ -19,6 +19,10 @@ git clone https://github.com/andreafrancia/trash-cli.git
 cd trash-cli
 sudo python setup.py install
 
+# Node and javascript shit
+sudo apt install nodejs npm
+sudo npm install -g lessmd
+
 # Install pathogen and Vundle for vim, so that we can use plugins
 mkdir -p ~/.vim/autoload ~/.vim/bundle && \
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
