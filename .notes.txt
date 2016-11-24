@@ -46,3 +46,4 @@ tree -J -o tree_output
 set tabstop=2 shiftwidth=2 expandtab
 retab
 
+alt-pgup to get window history
