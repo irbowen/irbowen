@@ -37,3 +37,12 @@ tree -J -o tree_output
 # Todo: All the vim things! fols, tabs, splits (vertical and horizontal), vimrc
 # tips
 # byobu stuff
+
+
+# Vim
+
+# tabs are, quite possible, the single worst creation ever created by mankind
+# Use this to get rid of them
+set tabstop=2 shiftwidth=2 expandtab
+retab
+

@@ -34,7 +34,7 @@ inoremap <Right> <Nop>
 set number
 set relativenumber
 
-set cursorline
+" set cursorline
 " Display extra whitespace
 set list listchars=tab:»·,trail:·,nbsp:·
 
