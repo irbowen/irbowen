@@ -3,6 +3,9 @@
 alias cdd="cd .."
 alias wcl="wc -l"
 
+# Constantly typing out "grep 'thing_i_want' -R ." is lame
+# This lets me just type "grep 'thing_i_want'", and it will recursively search the current dir
+function greph { grep "$1" -R .; }
 
 alias rm='echo "This is not the command you are looking for."; false'
 alias trash='trash-put'
