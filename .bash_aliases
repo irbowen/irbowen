@@ -1,11 +1,13 @@
 
-
+# Naming: Easy to type
 alias cdd="cd .."
+# Naming: wcl => wcl -[l]
 alias wcl="wc -l"
 
 # Constantly typing out "grep 'thing_i_want' -R ." is lame
-# This lets me just type "grep 'thing_i_want'", and it will recursively search the current dir
-function greph { grep "$1" -R .; }
+# This lets me just type "greph 'thing_i_want'", and it will recursively search the current dir
+# Naming: greph => grep [h]ere
+function greph { grep "$1" -R . ; } 
 
 alias rm='echo "This is not the command you are looking for."; false'
 alias trash='trash-put'
