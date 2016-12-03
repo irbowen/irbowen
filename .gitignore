@@ -1,4 +1,9 @@
 .config/*
+.ssh/*
+.local/*
+.gnome/
+.gnome2/
+.mozilla/
 Deskton/*
 Downloads/*
 Dropbox/*

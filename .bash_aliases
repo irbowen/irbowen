@@ -1,6 +1,7 @@
 
 
 alias cdd="cd .."
+alias cddd="cd ..; cd .."
 alias wcl="wc -l"
 
 # Constantly typing out "grep 'thing_i_want' -R ." is lame

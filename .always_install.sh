@@ -2,14 +2,23 @@
 # Get all of our packages up to date
 sudo apt update
 
-# screen tmux and byobu
-sudo apt install screen tmux byobu
-
-# Install the essentials!
-sudo apt install vim git
+# Install the essentials, so we can actually do some work
+sudo apt install vim git screen tmux byobu
 
 # Compilers
 sudo apt install gcc clang g++ build-essential cmake
+
+# PHP Stuff
+sudo apt install php5 php5-cli php5-common php5-json php5-readline
+sudo apt install apache2 apache2-bin apache2-data apache2-utils libapache2-mod-php5
+
+# Setup composer - dependency/package manager for php
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php -r "if (hash_file('SHA384', 'composer-setup.php') === 'aa96f26c2b67226a324c27919f1eb05f21c248b987e6195cad9690d5c1ff713d53020a02ac8c217dbf90a7eacc9d141d') { echo 'Installer verified'; } else { echo 'Installer corrupt'; unlink('composer-setup.php'); } echo PHP_EOL;"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+# Move composer so that we can use it globally
+sudo mv composer.phar /usr/local/bin/composer
 
 # Python 
 sudo apt install python-dev python3-dev python-pip python3-pip
