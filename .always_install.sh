@@ -44,6 +44,7 @@ git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 # Get Nerdtree up and running
 git clone https://github.com/scrooloose/nerdtree.git ~/.vim/bundle/nerdtree
+git clone git://github.com/tpope/vim-surround.git ~/.vim/bundle/vim-surround
 
 # Get youcomplete me
 cd ~/.vim/bundle/YouCompleteMe
