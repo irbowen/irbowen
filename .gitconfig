@@ -9,3 +9,4 @@
 	tool = vimdiff3
 [alias]
 	mercn = merge --no-ff
+	s = status

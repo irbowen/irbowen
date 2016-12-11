@@ -24,6 +24,7 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+inoremap {<CR> {<CR>}<Esc>ko
 
 " Relative numbers let you just around
 " faster, as well as know how many lines
