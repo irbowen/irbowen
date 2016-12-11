@@ -2,6 +2,8 @@
 alias cdd="cd .."
 alias cddd="cd ..; cd .."
 alias wcl="wc -l"
+alias lesr="less -r"
+alias gsr="git status | lesr"
 
 # Constantly typing out "grep 'thing_i_want' -R ." is lame
 # This lets me just type "greph 'thing_i_want'", and it will recursively search the current dir

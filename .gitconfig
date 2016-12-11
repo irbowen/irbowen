@@ -7,6 +7,8 @@
 	editor = vim
 [diff]
 	tool = vimdiff3
+[color]
+	status = always
 [alias]
 	mercn = merge --no-ff
 	s = status
