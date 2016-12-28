@@ -12,6 +12,7 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'Valloric/YouCompleteMe'
+Plugin 'ctrlpvim/ctrlp.vim'
 " End configuration, makes the plugins available
 call vundle#end()
 
