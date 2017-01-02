@@ -44,8 +44,6 @@ imap jj <ESC>
 nnoremap j gj
 nnoremap k gk
 
-" Is it the best? probably not
-colo desert
 
 " We have to have syntax highlighting!
 syntax enable
@@ -137,6 +135,7 @@ map <C-n> :NERDTreeToggle<CR>
 " Close vim if nerdtree is the only thing still open
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+
 " If we're using python, let's use 4 spaces (everyone's doing it...)
 autocmd Filetype python setlocal ts=4 sw=4 sts=0 expandtab
 
@@ -146,6 +145,7 @@ vnoremap <silent> -# :s#^\###<cr>:noh<cr>
 execute pathogen#infect()
 call pathogen#helptags()
 
-
-
+" Is it the best? probably not
+" Needs to be loaded AFTER the pathogen call
+colo Monokai
 
