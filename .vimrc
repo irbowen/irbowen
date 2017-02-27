@@ -4,6 +4,10 @@
 set nocompatible              " be iMproved, required
 filetype off                  " required
 
+
+au BufNewFile,BufRead *.tpl :set ft=php
+
+
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -128,7 +132,7 @@ nnoremap <Space> za
 set clipboard=unnamedplus
 
 " Open NERDTreee on startup
-autocmd vimenter * NERDTree
+" autocmd vimenter * NERDTree
 " Because I don't want to start with my cursor in the NerdTree window
 autocmd VimEnter * wincmd p
 " Map opening of NERDTreee to Ctrl + N
