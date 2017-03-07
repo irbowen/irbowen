@@ -12,3 +12,4 @@
 [alias]
 	mercn = merge --no-ff
 	s = status
+	b = branch
