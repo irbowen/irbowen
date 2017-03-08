@@ -32,6 +32,10 @@ inoremap <Left> <Nop>
 inoremap <Right> <Nop>
 inoremap {<CR> {<CR>}<Esc>ko
 
+" Tying shift is hard
+nnoremap <leader>w :w<cr>
+nnoremap <leader>q :q<cr>
+
 " Relative numbers let you just around
 " faster, as well as know how many lines
 " you want to yank or delete
