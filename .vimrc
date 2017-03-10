@@ -73,9 +73,9 @@ set backspace=indent,eol,start
 " Why do you need so many commands to make tabs
 " work correctly?  
 set autoindent
-set shiftwidth=2
-set tabstop=2
-set softtabstop=2
+set shiftwidth=4
+set tabstop=4
+set softtabstop=4
 set expandtab
 " Spaces are *always* better, but Makefiles require tabs...
 " This lets us use Shift+Tab to insert a tab 
