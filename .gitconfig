@@ -13,3 +13,5 @@
 	mercn = merge --no-ff
 	s = status
 	b = branch
+	d = diff
+	dc = diff --cached
