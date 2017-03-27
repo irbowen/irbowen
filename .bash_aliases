@@ -24,3 +24,5 @@ alias killtests="ps aux | grep test_ | grep python | awk '{print \$2}' | xargs k
 
 # To err is human
 eval $(thefuck --alias)
+
+export MAKEFLAGS="-j 8"
