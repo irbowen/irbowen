@@ -26,3 +26,5 @@ alias killtests="ps aux | grep test_ | grep python | awk '{print \$2}' | xargs k
 eval $(thefuck --alias)
 
 export MAKEFLAGS="-j 8"
+
+alias killnginx="sudo fuser -k 80/tcp"
