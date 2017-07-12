@@ -15,3 +15,5 @@
 	b = branch
 	d = diff
 	dc = diff --cached
+	dag = log --all --graph --format='format:%C(yellow)%h %C(reset) %C(blue) %aN %C(reset) %C(magenta) %cr% C(reset) %C(auto)%d%C(reset)%s' --date-order
+	adog = log --all --decorate --oneline --graph
